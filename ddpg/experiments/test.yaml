@@ -1,0 +1,55 @@
+# Experiment
+experiment_name:
+  desc: Name of the experiment
+  value: 'tes'
+env:
+  desc: Gym environment Name
+  value: 'SSLGoToBall-v0'
+agent:
+  desc: Agent type
+  value: 'sequential'
+torch_device:
+  desc: pyTorch device 'cuda' or 'cpu'
+  value: 'cuda'
+
+# RL
+replay_initial:
+  desc: Size of each mini-batch
+  value: 100000
+gamma:
+  desc: Size of each mini-batch
+  value: 0.98
+buffer_size:
+  desc: Replay Buffer Size
+  value: 2000000
+alpha:
+  desc: Target Network Sync Alpha
+  value: 0.999
+noise_sigma_start:
+  desc: Action noise initial sigma value
+  value: 1.0
+noise_sigma_min:
+  desc: Action noise minimum sigma value
+  value: 0.15
+noise_sigma_decay:
+  desc: After each episode noise sigma will decay to x * prev_value
+  value: 0.9999
+
+# Network
+batch_size:
+  desc: Size of each experience batch
+  value: 128
+learning_rate_pi:
+  desc: pi function learning rate
+  value: 0.0001
+learning_rate_q:
+  desc: q function learning rate
+  value: 0.0001
+
+# Saving
+model_save_frequency:
+  desc: Save network model every x steps
+  value: 100000
+gif_frequency:
+  desc: Make a gif of policy acting on env every x steps
+  value: 100000
